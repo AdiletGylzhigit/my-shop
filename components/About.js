@@ -4,7 +4,7 @@ import React from "react";
 export default function About() {
   return (
     <div className="mt-[150px] min-h-[80vh] flex flex-col items-center">
-      <div className="w-[700px]">
+      <div className="lg:w-[700px]">
         <h1 className="text-center text-3xl font-[500]">JIGIT+ О НАС</h1>
         <p className="mt-5 text-center">
           JIGIT+ был создан от небоходимости припомнить всем и самим себе то
@@ -23,7 +23,7 @@ export default function About() {
             className="h-[80vh] object-cover"
           />
         </div>
-        <div>
+        <div className="mt-32 sm:mt-0">
           <video
             src="/assets/about.mp4"
             autoPlay

@@ -5,7 +5,7 @@ import { BsTelegram } from "react-icons/bs";
 
 export default function Telegram() {
   return (
-    <div className="mt-[150px] min-h-[80vh] bg-black flex flex-wrap lg:flex-nowrap justify-center gap-10 items-center">
+    <div className="mt-[150px] px-5 min-h-[80vh] bg-black flex flex-wrap lg:flex-nowrap justify-center gap-10 items-center">
       <Image
         src="/assets/telegramSc.png"
         alt=""
@@ -13,7 +13,7 @@ export default function Telegram() {
         height={200}
         className="w-[150px] h-max"
       />
-      <div className="w-[400px] text-white font-[500]">
+      <div className="sm:w-[400px] text-white font-[500]">
         <p>
           ПРИСОЕДИНЯЙСЯ В ТЕЛЕГРАМ{" "}
           <BsTelegram className="mb-1 inline-block text-blue-500" /> ГРУППУ ДЛЯ

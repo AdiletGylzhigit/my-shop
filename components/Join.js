@@ -8,14 +8,14 @@ export default function Join() {
       </div>
       <div className="flex-1 flex flex-col justify-center items-center bg-black">
         <h1 className="text-white text-sm font-[500]">ПОДПИШИСЬ НА НАШИ НОВОСТИ</h1>
-        <div className="mt-5">
+        <div className="mt-5 flex">
           <input
             type="email"
             name="email"
-            className="lg:w-[400px] h-max p-3"
+            className="sm:w-[400px] h-max p-3"
             placeholder="Email"
           />
-          <button className="w-[200px] h-max bg-blue-700 p-3 font-[500] hover:text-gray-300">
+          <button className="sm:w-[200px] h-max bg-blue-700 p-3 font-[500] hover:text-gray-300">
             ПОДПИСАТЬСЯ
           </button>
         </div>
