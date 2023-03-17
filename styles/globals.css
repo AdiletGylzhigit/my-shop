@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,body{
+  overflow-x: hidden;
+}
+
+.one:hover {
+  transform: rotate(-90deg) translate3d(0,0,0);
+  transition: 1s all;
+}
+.two:hover{
+  transform: rotate(90deg) translateZ(0);
+  transition: 1s all;
+}
+.three:hover{
+  transform: rotate(90deg);
+  transition: 1s all;  
+}
