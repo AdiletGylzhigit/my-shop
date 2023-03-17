@@ -76,7 +76,7 @@ export default function ProductItem({ product, products }) {
             1200com (${product.price}){" "}
             <span className="text-rose-500 font-[500]">OFF</span>
           </p>
-          <p className="text-[12px]">(доставка в течений 1-3 дней)</p>
+          <p className="text-[12px]">(доставка в течений 1-3 дней - Бишкек)</p>
           <div className="mt-5 w-[300px]">
             <p className="font-[500]">Размер</p>
             <select
