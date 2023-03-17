@@ -2,7 +2,7 @@
 import nodemailer from "nodemailer";
 import Mailgen from "mailgen";
 
-const BASE_URL = "http://locahost:3000";
+const BASE_URL = "https://jigitplus.vercel.app";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
