@@ -388,7 +388,7 @@ export default function Cart({ product }) {
             </div>
             <div className="mt-4 p-5 shadow-md border m-5">
               <h1 className="mb-5 font-[500]">Заказать через Whatsapp</h1>
-              <a href="https://wa.me/message/7QWG2FBVYP4YI1" target="_blank">
+              <a href="https://wa.me/message/PYGKMJD35DYXA1" target="_blank">
                 <button className="w-full flex justify-center items-center gap-3 py-3 rounded-md text-white font-[500] bg-green-600 hover:scale-[1.01]">
                   <span>Whatsapp</span>
                   <span>
