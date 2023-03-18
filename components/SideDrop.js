@@ -43,12 +43,18 @@ export default function SideDrop() {
         />
         <div className="mt-5 flex sm:h-full flex-col">
           <Link href="/">
-            <p onClick={() => dispatch(dropToggle())} className="sm:flex-1 h-[20vh] flex justify-center items-center bg-black text-white hover:scale-[1.01] cursor-pointer">
+            <p
+              onClick={() => dispatch(dropToggle())}
+              className="sm:flex-1 h-[20vh] flex justify-center items-center bg-black text-white hover:scale-[1.01] cursor-pointer"
+            >
               ГЛАВНАЯ
             </p>
           </Link>
           <Link href="/products">
-            <p onClick={() => dispatch(dropToggle())} className="sm:flex-1 h-[20vh] flex justify-center items-center bg-gray-100 hover:scale-[1.01] cursor-pointer">
+            <p
+              onClick={() => dispatch(dropToggle())}
+              className="sm:flex-1 h-[20vh] flex justify-center items-center bg-gray-100 hover:scale-[1.01] cursor-pointer"
+            >
               ПРОДУКТЫ
             </p>
           </Link>
@@ -63,14 +69,17 @@ export default function SideDrop() {
             <div className="min-h-[35vh] sm:hidden flex flex-wrap gap-10 justify-center bg-black/50 text-white px-2 py-5 rounded-md">
               {filter &&
                 filteredProduct.slice(0, 20).map((p) => (
-                  <div key={p.slug} className="">
-                    <Image
-                      src={p.image}
-                      alt=""
-                      width={1000}
-                      height={1000}
-                      className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] object-contain rounded-sm"
-                    />
+                  <div key={p.slug}>
+                    <Link href={`/product/${p._id}`}>
+                      <Image
+                        onClick={() => dispatch(dropToggle())}
+                        src={p.image}
+                        alt=""
+                        width={1000}
+                        height={1000}
+                        className="h-[200px] w-[200px] sm:h-[300px] sm:w-[300px] object-contain rounded-sm"
+                      />
+                    </Link>
                     <h1 className="mt-3 text-center font-[500]">{p.name}</h1>
                     <p className="text-center font-[500] tracking-widest">
                       1200com (${p.price}){" "}
@@ -86,14 +95,17 @@ export default function SideDrop() {
       <div className="hidden sm:block absolute left-[40%] top-[20%] flex flex-wrap gap-10 justify-center bg-black/50 text-white px-2 py-5 rounded-md">
         {filter &&
           filteredProduct.slice(0, 20).map((p) => (
-            <div key={p.slug} className="">
-              <Image
-                src={p.image}
-                alt=""
-                width={1000}
-                height={1000}
-                className="h-[300px] w-[300px] object-contain rounded-sm"
-              />
+            <div key={p.slug}>
+              <Link href={`/product/${p._id}`}>
+                <Image
+                  onClick={() => dispatch(dropToggle())}
+                  src={p.image}
+                  alt=""
+                  width={1000}
+                  height={1000}
+                  className="h-[300px] w-[300px] object-contain rounded-sm"
+                />
+              </Link>
               <h1 className="mt-3 text-center font-[500]">{p.name}</h1>
               <p className="text-center font-[500] tracking-widest">
                 1200com (${p.price}){" "}
