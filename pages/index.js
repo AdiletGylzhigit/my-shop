@@ -29,7 +29,7 @@ export default function Home({ product }) {
     <Layout>
       <Head>
         <title>Главная Страница - JIGIT+</title>
-      <meta name="google-site-verification" content="google6f86752dbcc01af1" />
+        <meta name="google-site-verification" content="Z1y-jEXqrFFvb9uUB6DXBs1iHFTZNZDdscjZERY8GDo" />
       </Head>
       <Hero />
       <Featured product={product} />
