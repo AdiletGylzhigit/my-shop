@@ -6,9 +6,9 @@ import Navbar from "./Navbar";
 export default function Layout({ children, title }) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{title}</title>
-      </Head>
+      </Head> */}
       <Navbar />
       <main className="min-h-[80vh]">{children}</main>
       <Footer />
