@@ -7,6 +7,7 @@ import Telegram from "@/components/Telegram";
 import clientPromise from "@/mongo/connectdb";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Head from "next/head";
 
 export async function getStaticProps() {
   const client = await clientPromise;
@@ -26,6 +27,9 @@ export async function getStaticProps() {
 export default function Home({ product }) {
   return (
     <Layout title="Главная Страница - JIGIT+">
+      <Head>
+        <meta name="JIGIT+" content="JIGIT+" />
+      </Head>
       <Hero />
       <Featured product={product} />
       <About />
