@@ -22,10 +22,6 @@ export default function Featured({ product }) {
     dispatch(cartToggle());
   };
 
-  console.log(color)
-  console.log(size)
-
-
   return (
     <div className="mt-32 min-h-[80vh] px-5 lg:px-[250px] grid lg:grid-cols-2 gap-10">
       <div>

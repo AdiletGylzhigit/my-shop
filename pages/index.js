@@ -8,14 +8,13 @@ import clientPromise from "@/mongo/connectdb";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-
 export async function getStaticProps() {
   const client = await clientPromise;
   const db = client.db("my-shop");
 
   const product = await db
     .collection("products")
-    .findOne({ name: "В работай тишине Футболка." });
+    .findOne({ name: "В работай тишине Футболка" });
 
   return {
     props: {

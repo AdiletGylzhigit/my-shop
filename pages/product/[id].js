@@ -39,8 +39,8 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ProductItem({ product, products }) {
-  const [size, setSize] = useState("M");
-  const [color, setColor] = useState("Черный");
+  const [size, setSize] = useState(product.sizes[0]);
+  const [color, setColor] = useState(product.colors[0]);
   const state = useSelector((state) => state.app);
   const dispatch = useDispatch();
 
@@ -75,28 +75,32 @@ export default function ProductItem({ product, products }) {
           <p className="my-2 font-[500]">
             Цена: <span className="font-[400]">{product.price} сом</span>
           </p>
-          <p className="text-[12px] font-[500]">(доставка в течений 1-3 дней - Бишкек)</p>
+          <p className="text-[12px] font-[500]">
+            (доставка в течений 1-3 дней - Бишкек)
+          </p>
           <div className="mt-5 w-[300px]">
             <p className="font-[500]">Размер</p>
             <select
               onChange={(e) => setSize(e.target.value)}
               className="mt-2 w-full bg-gray-100 p-3"
             >
-              <option>M</option>
-              <option>L</option>
-              <option>XL</option>
-              <option>XXL</option>
+              {product.sizes.map((item) => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
             </select>
           </div>
           <div className="mt-5 w-[300px]">
             <p className="font-[500]">Цвет</p>
             <select
-              onChange={(e) => setColor(e.target.value)}
-              className="mt-2 w-full bg-gray-100 p-3"
-            >
-              <option>Черный</option>
-              {/* <option>Белый</option> */}
-            </select>
+            onChange={(e) => setColor(e.target.value)}
+            className="mt-2 w-full bg-gray-100 p-3"
+          >
+            {product.colors.map((item) => (
+              <option key={item} value={item}>{item}</option>
+            ))}
+          </select>
           </div>
           <div className="mt-5 w-[300px]">
             <button

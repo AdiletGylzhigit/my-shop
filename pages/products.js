@@ -37,8 +37,7 @@ export default function Products({ products }) {
               <div className="min-h-[100px] bg-gray-100 flex flex-col justify-center items-center">
                 <h1 className="text-center font-[500]">{product.name}</h1>
                 <p className="mt-2 text-center font-[500] tracking-widest">
-                  1200com (${product.price}){" "}
-                  <span className="text-rose-500 font-[500]">OFF</span>
+                  {product.price} сом
                 </p>
               </div>
             </div>
