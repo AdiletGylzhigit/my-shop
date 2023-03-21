@@ -8,7 +8,6 @@ export default function Layout({ children, title }) {
     <>
       <Head>
         <title>{title}</title>
-        <meta name="jigit+" content="JIGIT+"></meta>
       </Head>
       <Navbar />
       <main className="min-h-[80vh]">{children}</main>

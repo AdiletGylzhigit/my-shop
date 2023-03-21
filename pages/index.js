@@ -26,16 +26,21 @@ export async function getStaticProps() {
 
 export default function Home({ product }) {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Главная Страница - JIGIT+</title>
-        <meta name="google-site-verification" content="Z1y-jEXqrFFvb9uUB6DXBs1iHFTZNZDdscjZERY8GDo" />
+        <meta
+          name="google-site-verification"
+          content="Z1y-jEXqrFFvb9uUB6DXBs1iHFTZNZDdscjZERY8GDo"
+        />
       </Head>
-      <Hero />
-      <Featured product={product} />
-      <About />
-      <Telegram />
-      <Join />
-    </Layout>
+      <Layout>
+        <Hero />
+        <Featured product={product} />
+        <About />
+        <Telegram />
+        <Join />
+      </Layout>
+    </>
   );
 }
