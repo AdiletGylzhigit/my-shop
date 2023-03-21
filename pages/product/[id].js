@@ -39,8 +39,8 @@ export async function getStaticProps({ params }) {
 }
 
 export default function ProductItem({ product, products }) {
-  const [size, setSize] = useState('M');
-  const [color, setColor] = useState('Черный');
+  const [size, setSize] = useState("M");
+  const [color, setColor] = useState("Черный");
   const state = useSelector((state) => state.app);
   const dispatch = useDispatch();
 
@@ -72,11 +72,10 @@ export default function ProductItem({ product, products }) {
         <div className="w-[350px]">
           <h1 className="uppercase text-xl font-[500]">{product.name}</h1>
           <p className="mt-5">{product.description}</p>
-          <p>
-            1200com (${product.price}){" "}
-            <span className="text-rose-500 font-[500]">OFF</span>
+          <p className="my-2 font-[500]">
+            Цена: <span className="font-[400]">{product.price} сом</span>
           </p>
-          <p className="text-[12px]">(доставка в течений 1-3 дней - Бишкек)</p>
+          <p className="text-[12px] font-[500]">(доставка в течений 1-3 дней - Бишкек)</p>
           <div className="mt-5 w-[300px]">
             <p className="font-[500]">Размер</p>
             <select
@@ -129,7 +128,7 @@ export default function ProductItem({ product, products }) {
         <h1 className="text-center text-xl font-[500]">
           ЗАКОНЧИ СВОЙ FIT С ЭТИМИ ПРОДУКТАМИ...
         </h1>
-        <div className="mt-20 grid lg:grid-cols-3 gap-10 justify-center">
+        <div className="mt-20 flex flex-wrap gap-10 justify-center">
           {products.map((product) => (
             <div key={product._id} className="mt-10 h-[500px] w-[300px]">
               <Link href={`/product/${product._id}`}>

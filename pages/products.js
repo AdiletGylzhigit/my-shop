@@ -22,7 +22,7 @@ export default function Products({ products }) {
     <Layout title="Продукты - JIGIT+">
       <div className="mt-[150px] px-5 lg:px-[200px]">
         <h1 className="text-center text-3xl font-[500]">ВСЕ ПРОДУКТЫ.</h1>
-        <div className="mt-20 grid lg:grid-cols-3 gap-10 justify-center">
+        <div className="mt-20 flex flex-wrap gap-10 justify-center">
           {products.map((product) => (
             <div key={product._id} className="mt-10 h-[500px] w-[300px]">
               <Link href={`/product/${product._id}`}>

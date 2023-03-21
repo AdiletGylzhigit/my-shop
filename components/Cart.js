@@ -41,7 +41,7 @@ export default function Cart({ product }) {
   const round2 = (num) => Math.round(num * 100 + Number.EPSILON) / 100;
 
   const totalPrice = round2(
-    cartItems.reduce((a, c) => a + c.quantity * c.price, 0)
+    cartItems.reduce((a, c) => a + c.quantity * c.price, 0) / 87
   ); // 123.4567 => 123.46
 
   useEffect(() => {
@@ -94,19 +94,185 @@ export default function Cart({ product }) {
 
   function onApprove(data, actions) {
     return actions.order.capture().then(async function (details) {
-      const { name, slug, quantity, size, color } = cartItems[0];
       const { fullName, address, phoneNumber, email } = shippingAddress;
+      
+      let name2;
+      let slug2;
+      let quantity2;
+      let size2;
+      let color2;
+      let name3;
+      let slug3;
+      let quantity3;
+      let size3;
+      let color3;
+      let name4;
+      let slug4;
+      let quantity4;
+      let size4;
+      let color4;
+      let name5;
+      let slug5;
+      let quantity5;
+      let size5;
+      let color5;
+      let name6;
+      let slug6;
+      let quantity6;
+      let size6;
+      let color6;
+      let name7;
+      let slug7;
+      let quantity7;
+      let size7;
+      let color7;
+      let name8;
+      let slug8;
+      let quantity8;
+      let size8;
+      let color8;
+      let name9;
+      let slug9;
+      let quantity9;
+      let size9;
+      let color9;
+      let name10;
+      let slug10;
+      let quantity10;
+      let size10;
+      let color10;
+
+      const { name, slug, quantity, size, color } = cartItems[0];
+
+      if(cartItems[1]){
+        const { name:name2_1, slug:slug2_1, quantity:quantity2_1, color:color2_1, size:size2_1 } = cartItems[1];
+        name2 = name2_1;
+        slug2 = slug2_1;
+        size2 = size2_1;
+        color2 = color2_1;
+        quantity2 = quantity2_1;
+      }
+      if(cartItems[2]){
+        const { name:name3_1, slug:slug3_1, quantity:quantity3_1, color:color3_1, size:size3_1 } = cartItems[2];
+        name3 = name3_1;
+        slug3 = slug3_1;
+        quantity3 = quantity3_1;
+        size3 = size3_1;
+        color3 = color3_1;
+      }
+      if(cartItems[3]){
+        const { name:name4_1, slug:slug4_1, quantity:quantity4_1, color:color4_1, size:size4_1 } = cartItems[3];
+        name4 = name4_1;
+        slug4 = slug4_1;
+        quantity4 = quantity4_1;
+        size4 = size4_1;
+        color4 = color4_1;
+      }
+      if(cartItems[4]){
+        const { name:name5_1, slug:slug5_1, quantity:quantity5_1, color:color5_1, size:size5_1 } = cartItems[4];
+        name5 = name5_1;
+        slug5 = slug5_1;
+        quantity5 = quantity5_1;
+        size5 = size5_1;
+        color5 = color5_1;
+      }
+      if(cartItems[5]){
+        const { name:name6_1, slug:slug6_1, quantity:quantity6_1, color:color6_1, size:size6_1 } = cartItems[5];
+        name6 = name6_1;
+        slug6 = slug6_1;
+        quantity6 = quantity6_1;
+        size6 = size6_1;
+        color6 = color6_1;
+      }
+      if(cartItems[6]){
+        const { name:name7_1, slug:slug7_1, quantity:quantity7_1, color:color7_1, size:size7_1 } = cartItems[6];
+        name7 = name7_1;
+        slug7 = slug7_1;
+        quantity7 = quantity7_1;
+        size7 = size7_1;
+        color7 = color7_1;
+      }
+      if(cartItems[7]){
+        const { name:name8_1, slug:slug8_1, quantity:quantity8_1, color:color8_1, size:size8_1 } = cartItems[7];
+        name8 = name8_1;
+        slug8 = slug8_1;
+        quantity8 = quantity8_1;
+        size8 = size8_1;
+        color8 = color8_1;
+      }
+      if(cartItems[8]){
+        const { name:name9_1, slug:slug9_1, quantity:quantity9_1, color:color9_1, size:size9_1 } = cartItems[8];
+        name9 = name9_1;
+        slug9 = slug9_1;
+        quantity9 = quantity9_1;
+        size9 = size9_1;
+        color9 = color9_1;
+      }
+      if(cartItems[9]){
+        const { name:name10_1, slug:slug10_1, quantity:quantity10_1, color:color10_1, size:size10_1 } = cartItems[9];
+        name10 = name10_1;
+        slug10 = slug10_1;
+        quantity10 = quantity10_1;
+        size10 = size10_1;
+        color10 = color10_1;
+      }
+
       const infoOrder = {
         name,
         slug,
+        quantity,
         size,
         color,
-        totalPrice,
-        quantity,
+        name2,
+        slug2,
+        quantity2,
+        size2,
+        color2,
+        name3,
+        slug3,
+        quantity3,
+        size3,
+        color3,
+        name4,
+        slug4,
+        quantity4,
+        size4,
+        color4,
+        name5,
+        slug5,
+        quantity5,
+        size5,
+        color5,
+        name6,
+        slug6,
+        quantity6,
+        size6,
+        color6,
+        name7,
+        slug7,
+        quantity7,
+        size7,
+        color7,
+        name8,
+        slug8,
+        quantity8,
+        size8,
+        color8,
+        name9,
+        slug9,
+        quantity9,
+        size9,
+        color9,
+        name10,
+        slug10,
+        quantity10,
+        size10,
+        color10,
         fullName,
         address,
         phoneNumber,
         email,
+        totalPrice,
       };
 
       try {
@@ -175,10 +341,10 @@ export default function Cart({ product }) {
           </div>
         )}
 
-        <div className="px-1">
+        <div className="px-2">
           {cartItems.length >= 1 &&
             cartItems.map((item, index) => (
-              <div className="flex" key={item._id}>
+              <div className="mt-10 flex" key={item._id}>
                 <Image
                   src={item.image}
                   alt=""
@@ -186,13 +352,13 @@ export default function Cart({ product }) {
                   height={200}
                   className="w-[100px] h-[100px]"
                 />
-                <div>
+                <div className='ml-1'>
                   <div className="flex gap-5">
                     <h5 className="text-normal text-[#324d67] text-lg font-bold lg:w-[250px]">
                       {item.name}
                     </h5>
-                    <div className="flex gap-5 sm:gap-10 items-start text-normal font-[500] w-[100px]">
-                      ${item.price}
+                    <div className="flex gap-3 items-start text-normal font-[500] w-[100px]">
+                      {item.price}сом
                       <select
                         value={item.quantity}
                         onChange={(e) =>
@@ -214,18 +380,13 @@ export default function Cart({ product }) {
                           <div className="font-[500]">
                             Количество:{" "}
                             <span className="font-[400]">
-                              {cartItems.reduce((a, c) => a + c.quantity, 0)}
+                            <span className="font-[400]">{item.quantity}</span>
                             </span>
                           </div>
                           <div className="font-[500]">
                             Цена:{" "}
                             <span className="font-[400]">
-                              {1200 * item.quantity}com ($
-                              {cartItems.reduce(
-                                (a, c) => a + c.quantity * c.price,
-                                0
-                              )}
-                              )
+                              {(item.price * item.quantity)}сом
                             </span>
                           </div>
                         </div>
@@ -256,6 +417,11 @@ export default function Cart({ product }) {
                 </div>
               </div>
             ))}
+        </div>
+
+        <div className="mt-5 mx-5 font-[500]">
+          Итого ({cartItems.reduce((a, c) => a + c.quantity, 0)}) :{" "}
+          {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)} сом
         </div>
 
         {cartItems.length > 0 && showShippingForm === false && (
