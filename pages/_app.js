@@ -9,36 +9,27 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 export default function App({ Component, pageProps, router }) {
   return (
-    <>
-      <Head>
-        <title>JIGIT+</title>
-        <meta
-          name="google-site-verification"
-          content="Z1y-jEXqrFFvb9uUB6DXBs1iHFTZNZDdscjZERY8GDo"
-        />
-      </Head>
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <Toaster />
-          <PayPalScriptProvider deferLoading={true}>
-            <motion.div
-              key={router.route}
-              initial="pageInitial"
-              animate="pageAnimate"
-              variants={{
-                pageInitial: {
-                  opacity: 0,
-                },
-                pageAnimate: {
-                  opacity: 1,
-                },
-              }}
-            >
-              <Component {...pageProps} />
-            </motion.div>
-          </PayPalScriptProvider>
-        </PersistGate>
-      </Provider>
-    </>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Toaster />
+        <PayPalScriptProvider deferLoading={true}>
+          <motion.div
+            key={router.route}
+            initial="pageInitial"
+            animate="pageAnimate"
+            variants={{
+              pageInitial: {
+                opacity: 0,
+              },
+              pageAnimate: {
+                opacity: 1,
+              },
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        </PayPalScriptProvider>
+      </PersistGate>
+    </Provider>
   );
 }
