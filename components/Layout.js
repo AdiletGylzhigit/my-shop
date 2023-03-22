@@ -6,9 +6,13 @@ import Navbar from "./Navbar";
 export default function Layout({ children, title }) {
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>{title}</title>
-      </Head> */}
+        <meta
+          name="google-site-verification"
+          content="Z1y-jEXqrFFvb9uUB6DXBs1iHFTZNZDdscjZERY8GDo"
+        />
+      </Head>
       <Navbar />
       <main className="min-h-[80vh]">{children}</main>
       <Footer />
