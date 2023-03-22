@@ -25,13 +25,7 @@ export async function getStaticProps() {
 export default function Home({ product }) {
   return (
     <>
-      <Head>
-        <title>JIGIT+</title>
-        <meta
-          name="google-site-verification"
-          content="Z1y-jEXqrFFvb9uUB6DXBs1iHFTZNZDdscjZERY8GDo"
-        />
-      </Head>
+
       <Layout>
         <Hero />
         <Featured product={product} />
