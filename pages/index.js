@@ -7,7 +7,6 @@ import Telegram from "@/components/Telegram";
 import clientPromise from "@/mongo/connectdb";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Head from "next/head";
 
 export async function getStaticProps() {
   const client = await clientPromise;
@@ -27,12 +26,12 @@ export async function getStaticProps() {
 export default function Home({ product }) {
   return (
     <>
-      <Head>
+      <head>
         <meta
           name="google-site-verification"
           content="Z1y-jEXqrFFvb9uUB6DXBs1iHFTZNZDdscjZERY8GDo"
         />
-      </Head>
+      </head>
       <Layout>
         <Hero />
         <Featured product={product} />
