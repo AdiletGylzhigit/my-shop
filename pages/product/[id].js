@@ -43,6 +43,7 @@ export default function ProductItem({ product, products }) {
   const [color, setColor] = useState(product.colors[0]);
   const state = useSelector((state) => state.app);
   const dispatch = useDispatch();
+  const [selectedImg, setSelectedImg] = useState("");
 
   const addToCartHandler = () => {
     const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
@@ -57,18 +58,41 @@ export default function ProductItem({ product, products }) {
     dispatch(cartToggle());
   };
 
+  const handleChange = (i) => {
+    setSelectedImg(i);
+  };
+
   return (
     <Layout title={`${product.name} - JIGIT+`}>
-      <div className="mt-[150px] px-5 lg:px-[200px] grid lg:grid-cols-2 gap-10">
-        <div>
-          <Image
-            src={product.image}
-            alt=""
-            width={1000}
-            height={1000}
-            className="h-full w-full object-contain"
-          />
-        </div>
+      <div className="mt-[150px] px-5 lg:px-[150px] grid lg:grid-cols-2 gap-10">
+          <div className="flex flex-col gap-5 lg:flex-row transition-all">
+            <Image
+              className="w-[400px] h-[450px] object-contain cursor-pointer"
+              alt=""
+              src={product.images[selectedImg] || product.images[0]}
+              width={500}
+              height={500}
+            />
+            <div >
+              <div
+                style={{ height: `${100 * selectedImg}px` }}
+                className="hidden lg:block absolute w-[2px] border-l border-black duration-500"
+              />
+            </div>
+            <div className="flex lg:flex-col gap-2">
+              {product.images.map((img, i) => (
+                <Image
+                  key={i}
+                  alt=""
+                  onClick={() => handleChange(i)}
+                  src={img}
+                  className="w-[40px] lg:w-[60px] object-contain cursor-pointer"
+                  width={500}
+                  height={500}
+                />
+              ))}
+            </div>
+          </div>
         <div className="w-[350px]">
           <h1 className="uppercase text-xl font-[500]">{product.name}</h1>
           <p className="mt-5">{product.description}</p>
@@ -91,13 +115,15 @@ export default function ProductItem({ product, products }) {
           <div className="mt-5 w-[300px]">
             <p className="font-[500]">Цвет</p>
             <select
-            onChange={(e) => setColor(e.target.value)}
-            className="mt-2 w-full bg-gray-100 p-3"
-          >
-            {product.colors.map((item) => (
-              <option key={item} value={item}>{item}</option>
-            ))}
-          </select>
+              onChange={(e) => setColor(e.target.value)}
+              className="mt-2 w-full bg-gray-100 p-3"
+            >
+              {product.colors.map((item) => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
           </div>
           <div className="mt-5 w-[300px]">
             <button
@@ -134,7 +160,7 @@ export default function ProductItem({ product, products }) {
             <div key={product._id} className="mt-10 h-[500px] w-[300px]">
               <Link href={`/product/${product._id}`}>
                 <Image
-                  src={product.image}
+                  src={product.images[0]}
                   alt=""
                   width={1000}
                   height={1000}

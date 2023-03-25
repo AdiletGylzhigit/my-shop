@@ -23,7 +23,7 @@ export default function Join() {
 
   return (
     <div className="mt-[150px] min-h-[25vh] flex flex-col lg:flex-row">
-      <div className="flex-1 flex justify-center items-center border-t border-t-black border-b border-b-black text-xl lg:text-3xl font-[500]">
+      <div className="flex-1 flex px-2 justify-center items-center border-t border-t-black border-b border-b-black text-xl lg:text-3xl font-[500]">
         ПУСТЬ ТВОИ РЕЗУЛЬТАТЫ ГОВОРЯТ ЗА ТЕБЯ
       </div>
       <div className="flex-1 flex flex-col justify-center items-center bg-black">

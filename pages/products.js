@@ -27,7 +27,7 @@ export default function Products({ products }) {
             <div key={product._id} className="mt-10 h-[500px] w-[300px]">
               <Link href={`/product/${product._id}`}>
                 <Image
-                  src={product.image}
+                  src={product.images[0]}
                   alt=""
                   width={1000}
                   height={1000}

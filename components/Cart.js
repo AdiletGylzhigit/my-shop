@@ -400,7 +400,7 @@ export default function Cart({ product }) {
             cartItems.map((item, index) => (
               <div className="mt-10 flex" key={item._id}>
                 <Image
-                  src={item.image}
+                  src={item.images[0]}
                   alt=""
                   width={200}
                   height={200}

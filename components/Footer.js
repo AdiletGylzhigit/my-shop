@@ -5,8 +5,8 @@ import { BsFacebook, BsWhatsapp } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <div className="mt-[100px] lg:px-20 py-12 lg:py-12 text-white font-[500] bg-black ">
-      <div className="flex justify-between">
+    <div className="mt-[100px] px-2 lg:px-20 py-12 lg:py-12 text-white font-[500] bg-black ">
+      <div className="flex flex-col sm:flex-row justify-between">
         <div className="flex flex-col justify-between">
           <p>Права защищены © JIGIT+ 2023 </p>
           <div className="mt-5 flex flex-wrap gap-5 lg:w-[700px]">
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <p className="mb-5">Связаться с нами</p>
+          <p className="mb-5 mt-5 sm:mt-0">Связаться с нами</p>
           <p className="flex gap-5  justify-start items-center">
             <AiOutlineMail size={20} />
             <span>jigitreply@gmail.com</span>
