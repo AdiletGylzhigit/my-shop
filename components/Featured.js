@@ -39,9 +39,6 @@ export default function Featured({ product }) {
         <p className="my-2 font-[500]">
           Цена: <span className="font-[400]">{product.price} сом</span>
         </p>
-        <p className="text-[12px] font-[500]">
-          (доставка в течений 1-3 дней - Бишкек)
-        </p>
         <div className="mt-5 w-[300px]">
           <p className="font-[500]">Размер</p>
           <select

@@ -95,7 +95,7 @@ export default function Cart({ product }) {
   function onApprove(data, actions) {
     return actions.order.capture().then(async function (details) {
       const { fullName, address, phoneNumber, email } = shippingAddress;
-      
+
       let name2;
       let slug2;
       let quantity2;
@@ -144,72 +144,126 @@ export default function Cart({ product }) {
 
       const { name, slug, quantity, size, color } = cartItems[0];
 
-      if(cartItems[1]){
-        const { name:name2_1, slug:slug2_1, quantity:quantity2_1, color:color2_1, size:size2_1 } = cartItems[1];
+      if (cartItems[1]) {
+        const {
+          name: name2_1,
+          slug: slug2_1,
+          quantity: quantity2_1,
+          color: color2_1,
+          size: size2_1,
+        } = cartItems[1];
         name2 = name2_1;
         slug2 = slug2_1;
         size2 = size2_1;
         color2 = color2_1;
         quantity2 = quantity2_1;
       }
-      if(cartItems[2]){
-        const { name:name3_1, slug:slug3_1, quantity:quantity3_1, color:color3_1, size:size3_1 } = cartItems[2];
+      if (cartItems[2]) {
+        const {
+          name: name3_1,
+          slug: slug3_1,
+          quantity: quantity3_1,
+          color: color3_1,
+          size: size3_1,
+        } = cartItems[2];
         name3 = name3_1;
         slug3 = slug3_1;
         quantity3 = quantity3_1;
         size3 = size3_1;
         color3 = color3_1;
       }
-      if(cartItems[3]){
-        const { name:name4_1, slug:slug4_1, quantity:quantity4_1, color:color4_1, size:size4_1 } = cartItems[3];
+      if (cartItems[3]) {
+        const {
+          name: name4_1,
+          slug: slug4_1,
+          quantity: quantity4_1,
+          color: color4_1,
+          size: size4_1,
+        } = cartItems[3];
         name4 = name4_1;
         slug4 = slug4_1;
         quantity4 = quantity4_1;
         size4 = size4_1;
         color4 = color4_1;
       }
-      if(cartItems[4]){
-        const { name:name5_1, slug:slug5_1, quantity:quantity5_1, color:color5_1, size:size5_1 } = cartItems[4];
+      if (cartItems[4]) {
+        const {
+          name: name5_1,
+          slug: slug5_1,
+          quantity: quantity5_1,
+          color: color5_1,
+          size: size5_1,
+        } = cartItems[4];
         name5 = name5_1;
         slug5 = slug5_1;
         quantity5 = quantity5_1;
         size5 = size5_1;
         color5 = color5_1;
       }
-      if(cartItems[5]){
-        const { name:name6_1, slug:slug6_1, quantity:quantity6_1, color:color6_1, size:size6_1 } = cartItems[5];
+      if (cartItems[5]) {
+        const {
+          name: name6_1,
+          slug: slug6_1,
+          quantity: quantity6_1,
+          color: color6_1,
+          size: size6_1,
+        } = cartItems[5];
         name6 = name6_1;
         slug6 = slug6_1;
         quantity6 = quantity6_1;
         size6 = size6_1;
         color6 = color6_1;
       }
-      if(cartItems[6]){
-        const { name:name7_1, slug:slug7_1, quantity:quantity7_1, color:color7_1, size:size7_1 } = cartItems[6];
+      if (cartItems[6]) {
+        const {
+          name: name7_1,
+          slug: slug7_1,
+          quantity: quantity7_1,
+          color: color7_1,
+          size: size7_1,
+        } = cartItems[6];
         name7 = name7_1;
         slug7 = slug7_1;
         quantity7 = quantity7_1;
         size7 = size7_1;
         color7 = color7_1;
       }
-      if(cartItems[7]){
-        const { name:name8_1, slug:slug8_1, quantity:quantity8_1, color:color8_1, size:size8_1 } = cartItems[7];
+      if (cartItems[7]) {
+        const {
+          name: name8_1,
+          slug: slug8_1,
+          quantity: quantity8_1,
+          color: color8_1,
+          size: size8_1,
+        } = cartItems[7];
         name8 = name8_1;
         slug8 = slug8_1;
         quantity8 = quantity8_1;
         size8 = size8_1;
         color8 = color8_1;
       }
-      if(cartItems[8]){
-        const { name:name9_1, slug:slug9_1, quantity:quantity9_1, color:color9_1, size:size9_1 } = cartItems[8];
+      if (cartItems[8]) {
+        const {
+          name: name9_1,
+          slug: slug9_1,
+          quantity: quantity9_1,
+          color: color9_1,
+          size: size9_1,
+        } = cartItems[8];
         name9 = name9_1;
         slug9 = slug9_1;
         quantity9 = quantity9_1;
         size9 = size9_1;
         color9 = color9_1;
       }
-      if(cartItems[9]){
-        const { name:name10_1, slug:slug10_1, quantity:quantity10_1, color:color10_1, size:size10_1 } = cartItems[9];
+      if (cartItems[9]) {
+        const {
+          name: name10_1,
+          slug: slug10_1,
+          quantity: quantity10_1,
+          color: color10_1,
+          size: size10_1,
+        } = cartItems[9];
         name10 = name10_1;
         slug10 = slug10_1;
         quantity10 = quantity10_1;
@@ -352,7 +406,7 @@ export default function Cart({ product }) {
                   height={200}
                   className="w-[100px] h-[100px]"
                 />
-                <div className='ml-1'>
+                <div className="ml-1">
                   <div className="flex gap-5">
                     <h5 className="text-normal text-[#324d67] text-lg font-bold lg:w-[250px]">
                       {item.name}
@@ -380,13 +434,15 @@ export default function Cart({ product }) {
                           <div className="font-[500]">
                             Количество:{" "}
                             <span className="font-[400]">
-                            <span className="font-[400]">{item.quantity}</span>
+                              <span className="font-[400]">
+                                {item.quantity}
+                              </span>
                             </span>
                           </div>
                           <div className="font-[500]">
                             Цена:{" "}
                             <span className="font-[400]">
-                              {(item.price * item.quantity)}сом
+                              {item.price * item.quantity}сом
                             </span>
                           </div>
                         </div>
@@ -419,10 +475,17 @@ export default function Cart({ product }) {
             ))}
         </div>
 
-        <div className="mt-5 mx-5 font-[500]">
-          Итого ({cartItems.reduce((a, c) => a + c.quantity, 0)}) :{" "}
-          {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)} сом
-        </div>
+        {cartItems.length > 0 && (
+          <>
+            <div className="mt-5 mx-5 font-[500]">
+              Итого ({cartItems.reduce((a, c) => a + c.quantity, 0)}) :{" "}
+              {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)} сом
+            </div>
+            <p className="text-[12px] mx-5">
+              (доставка в тот же день - Бишкек)
+            </p>
+          </>
+        )}
 
         {cartItems.length > 0 && showShippingForm === false && (
           <div className="mt-10 flex justify-center items-center">

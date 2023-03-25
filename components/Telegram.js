@@ -19,7 +19,7 @@ export default function Telegram() {
           <BsTelegram className="mb-1 inline-block text-blue-500" /> ГРУППУ ДЛЯ
           ЭКЛЮЗИВНЫХ ПРЕДЛОЖЕНИЙ.
         </p>
-        <a href="https://t.me/+cSzCnj1KYeYzYTFi" target="_blank">
+        <a href="https://t.me/jigitplus" target="_blank">
           <button className="mt-10 p-3 bg-blue-700 text-black hover:scale-[1.01]">
             ПРИСОЕДИНИТЬСЯ
           </button>
