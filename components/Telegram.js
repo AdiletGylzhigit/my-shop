@@ -17,7 +17,7 @@ export default function Telegram() {
           ЭКЛЮЗИВНЫХ ПРЕДЛОЖЕНИЙ.
         </p>
         <a href="https://t.me/jigitplus" target="_blank">
-          <button className="mt-10 p-3 bg-blue-700 text-black hover:scale-[1.01]">
+          <button className="my-10 p-3 bg-blue-700 text-black hover:scale-[1.01]">
             ПРИСОЕДИНИТЬСЯ
           </button>
         </a>
