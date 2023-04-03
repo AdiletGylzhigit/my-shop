@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 export default function About() {
@@ -15,7 +14,7 @@ export default function About() {
       </div>
       <div className="mt-10 grid lg:grid-cols-2">
         <div>
-          <Image
+          <img
             src="/assets/about-img.jpg"
             alt=""
             width={2000}

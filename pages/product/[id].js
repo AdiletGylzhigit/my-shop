@@ -2,7 +2,6 @@ import Layout from "@/components/Layout";
 import clientPromise from "@/mongo/connectdb";
 import { cartAddItem, cartToggle } from "@/redux/reducer";
 import { ObjectId } from "mongodb";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -66,7 +65,7 @@ export default function ProductItem({ product, products }) {
     <Layout title={`${product.name} - JIGIT+`}>
       <div className="mt-[150px] px-5 lg:px-[150px] grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col gap-5 lg:flex-row transition-all">
-            <Image
+            <img
               className="w-[400px] h-[450px] object-contain cursor-pointer"
               alt=""
               src={product.images[selectedImg] || product.images[0]}
@@ -81,7 +80,7 @@ export default function ProductItem({ product, products }) {
             </div>
             <div className="flex lg:flex-col gap-2">
               {product.images.map((img, i) => (
-                <Image
+                <img
                   key={i}
                   alt=""
                   onClick={() => handleChange(i)}
@@ -141,7 +140,7 @@ export default function ProductItem({ product, products }) {
               КУПИТЬ
             </button>
           </div>
-          <Image
+          <img
             src="/assets/payments.jpg"
             alt=""
             width={500}
@@ -159,7 +158,7 @@ export default function ProductItem({ product, products }) {
           {products.map((product) => (
             <div key={product._id} className="mt-10 h-[500px] w-[300px]">
               <Link href={`/product/${product._id}`}>
-                <Image
+                <img
                   src={product.images[0]}
                   alt=""
                   width={1000}

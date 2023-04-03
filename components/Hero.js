@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function Hero() {
   return (
     <div>
-      <Image
+      <img
         src="/assets/hero.jpg"
         alt=""
         width={2000}

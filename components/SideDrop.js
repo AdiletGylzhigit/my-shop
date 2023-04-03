@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { dropToggle } from "@/redux/reducer";
 import axios from "axios";
-import Image from "next/image";
 
 export default function SideDrop() {
   const [products, setProducts] = useState([]);
@@ -71,7 +70,7 @@ export default function SideDrop() {
                 filteredProduct.slice(0, 20).map((p) => (
                   <div key={p.slug}>
                     <Link href={`/product/${p._id}`}>
-                      <Image
+                      <img
                         onClick={() => dispatch(dropToggle())}
                         src={p.image}
                         alt=""

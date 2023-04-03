@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AiOutlineLeft, AiOutlineShopping } from "react-icons/ai";
 import { TiDeleteOutline } from "react-icons/ti";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { MdOutlineWhatsapp } from "react-icons/md";
 import { motion } from "framer-motion";
@@ -399,7 +398,7 @@ export default function Cart({ product }) {
           {cartItems.length >= 1 &&
             cartItems.map((item, index) => (
               <div className="mt-10 flex" key={item._id}>
-                <Image
+                <img
                   src={item.images[0]}
                   alt=""
                   width={200}
@@ -411,13 +410,14 @@ export default function Cart({ product }) {
                     <h5 className="text-normal text-[#324d67] text-lg font-bold lg:w-[250px]">
                       {item.name}
                     </h5>
-                    <div className="flex gap-3 items-start text-normal font-[500] w-[100px]">
+                    <div className="flex items-start text-normal font-[500] w-[100px]">
                       {item.price}сом
                       <select
                         value={item.quantity}
                         onChange={(e) =>
                           updateCartHandler(item, e.target.value)
                         }
+                        className="ml-2"
                       >
                         {[...Array(item.countInStock).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
@@ -429,15 +429,13 @@ export default function Cart({ product }) {
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="mt-2">
-                      <div className="mt-2 flex flex-col sm:flex-row sm:gap-3 w-max ">
+                      <div className="mt-2 flex flex-col sm:flex-row w-max ">
                         <div>
                           <div className="font-[500]">
                             Количество:{" "}
-                            <span className="font-[400]">
                               <span className="font-[400]">
                                 {item.quantity}
                               </span>
-                            </span>
                           </div>
                           <div className="font-[500]">
                             Цена:{" "}
@@ -482,7 +480,7 @@ export default function Cart({ product }) {
               {cartItems.reduce((a, c) => a + c.quantity * c.price, 0)} сом
             </div>
             <p className="text-[12px] mx-5">
-              (доставка в тот же день - Бишкек)
+              (доставка осущетсвляется по Бишкеку 1-3 дней)
             </p>
           </>
         )}

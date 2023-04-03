@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BsTelegram } from "react-icons/bs";
@@ -6,7 +5,7 @@ import { BsTelegram } from "react-icons/bs";
 export default function Telegram() {
   return (
     <div className="mt-[150px] px-5 min-h-[80vh] bg-black flex flex-wrap lg:flex-nowrap justify-center gap-10 items-center">
-      <Image
+      <img
         src="/assets/telegramSc.png"
         alt=""
         width={2000}

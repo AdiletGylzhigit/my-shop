@@ -15,11 +15,11 @@ export default function Navbar() {
     <nav className="h-[10vh] px-[50px] py-5 lg:py-0 lg:px-[200px] flex justify-between fixed w-full top-0 z-[998]">
       <div
         onClick={() => dispatch(dropToggle())}
-        className="one flex gap-1 mt-1 cursor-pointer"
+        className="one flex mt-1 cursor-pointer"
       >
-        <div className="w-[4px] h-[25px] bg-black mt-[5px]" />
-        <div className="w-[4px] h-[25px] bg-black mt-[5px]" />
-        <div className="w-[4px] h-[25px] bg-black mt-[5px]" />
+        <div className="mr-1 w-[4px] h-[25px] bg-black mt-[5px]" />
+        <div className="mr-1 w-[4px] h-[25px] bg-black mt-[5px]" />
+        <div className="mr-1 w-[4px] h-[25px] bg-black mt-[5px]" />
       </div>
       <div>
         <Link href="/">

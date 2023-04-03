@@ -1,5 +1,4 @@
 import { cartAddItem, cartToggle } from "@/redux/reducer";
-import Image from "next/image";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -30,7 +29,7 @@ export default function Featured({ product }) {
   return (
     <div className="mt-32 min-h-[80vh] px-5 lg:px-[150px] grid lg:grid-cols-2 gap-10">
       <div className="flex flex-col gap-5 lg:flex-row transition-all">
-        <Image
+        <img
           className="w-[400px] h-[450px] object-contain cursor-pointer"
           alt=""
           src={product.images[selectedImg] || product.images[0]}
@@ -45,7 +44,7 @@ export default function Featured({ product }) {
         </div>
         <div className="flex lg:flex-col gap-2">
           {product.images.map((img, i) => (
-            <Image
+            <img
               key={i}
               alt=""
               onClick={() => handleChange(i)}

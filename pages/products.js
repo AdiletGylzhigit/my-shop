@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import clientPromise from "@/mongo/connectdb";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -26,7 +25,7 @@ export default function Products({ products }) {
           {products.map((product) => (
             <div key={product._id} className="mt-10 h-[500px] w-[300px]">
               <Link href={`/product/${product._id}`}>
-                <Image
+                <img
                   src={product.images[0]}
                   alt=""
                   width={1000}
