@@ -8,9 +8,7 @@ export default function Telegram() {
       <img
         src="/assets/telegramSc.png"
         alt=""
-        width={2000}
-        height={200}
-        className="w-[150px] h-max"
+        className="w-[150px] h-max object-contain"
       />
       <div className="sm:w-[400px] text-white font-[500]">
         <p>
