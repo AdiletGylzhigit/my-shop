@@ -444,7 +444,7 @@ export default function Cart({ product }) {
                             </span>
                           </div>
                         </div>
-                        <div>
+                        <div className="md:ml-4 ml-0">
                           <p className="font-[500]">
                             Размер:{" "}
                             <span className="font-[400]">{item.size}</span>
